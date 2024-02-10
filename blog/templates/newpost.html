@@ -1,0 +1,54 @@
+{% include 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post</title>
+    <style>
+        .formdata{
+            height: 480px;
+            width: 700px;
+            
+            margin: 70px auto;
+            text-align: center;
+            font-size: 20px;
+            background-color: aliceblue;
+        }
+        .heading{
+            text-align: center;
+            background-color: navajowhite;
+            font-size: 40px;
+        }
+        input{
+            height: 20px;
+            width: 150px;
+            font-size: 15px;
+            text-align: center;
+        }
+        .btn{
+            height: 40px;
+            width: 180px;
+            background-color: navajowhite;
+            border-radius: 10px;
+            font-weight: 800;
+        }
+        .btn:hover{
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+<body>
+    <div class="formdata">
+        <h1 class="heading">Create Your Blog</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <!-- <p>Author : <input type="text" name="author" id="" placeholder="Enter Author Name"></p> -->
+            <p>Title : <input type="text" name="title" id="" placeholder="Enter Title"></p>
+            <p>Description : <textarea name="desc" id="" cols="30" rows="10" placeholder="Write your Description"></textarea></p>
+            <p>Date : <input type="date" name="date" id="" placeholder="Enter Date"></p>
+            <p><input type="submit" value="Create Blog Now" class="btn"></p>
+        </form>
+    </div>
+</body>
+</html>

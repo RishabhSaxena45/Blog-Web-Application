@@ -1,0 +1,57 @@
+{% include 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Posts</title>
+    <style>
+        .data{
+            height: 230px;
+            width: 97%;
+            margin: 1.5%;
+        }
+        .author{
+            background-color: #EED5D2;
+            height: 70px;
+            line-height: 70px;
+            font-size: 40px;
+            font-weight: 800;
+        }
+        .title{
+            background-color: #CDB7B5;
+            height: 40px;
+            line-height: 40px;
+            font-size: 30px;
+            font-weight: 800;
+        }
+        .desc{
+            background-color: #CDB7B5;
+            height: 120px;
+            text-align: justify;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+        .heading{
+            text-align: center;
+            background-color: #BBBDD6;
+            width: 97%;
+            margin: 1.5%;
+        }
+        
+    
+
+    </style>
+</head>
+<body>
+    <h1 class="heading">Showing Your Blogs</h1>
+    {% for x in posts %}
+    <div class="data">
+        <div class="author">{{x.author}}</div>
+        <div class="title"> Title : {{x.title}}</div>
+        <div class="desc">{{x.desc}}</div>
+        <div><a href="/update/{{x.id}}">EDIT</a></div>
+    </div>
+    {% endfor %}
+</body>
+</html>

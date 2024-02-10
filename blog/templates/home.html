@@ -1,0 +1,47 @@
+{% include 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .data{
+            height: 200px;
+            width: 97%;
+            margin: 1.5%;
+        }
+        .author{
+            background-color: #EED5D2;
+            height: 70px;
+            line-height: 70px;
+            font-size: 40px;
+            font-weight: 800;
+        }
+        .title{
+            background-color: #CDB7B5;
+            height: 40px;
+            line-height: 40px;
+            font-size: 30px;
+            font-weight: 800;
+        }
+        .desc{
+            background-color: #CDB7B5;
+            height: 90px;
+            text-align: justify;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    {% for x in postdata %}
+    <div class="data">
+        <div class="author">{{x.author}}</div>
+        <div class="title"> Title : {{x.title}}</div>
+        <div class="desc">{{x.desc}}</div>
+    </div>
+    {% endfor %}
+</body>
+</html>

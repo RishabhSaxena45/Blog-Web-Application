@@ -1,0 +1,35 @@
+
+.container{
+    height: 400px;
+    width: 500px;
+    /* border: 2px solid black; */
+    margin: 150px auto;
+    background-color: aliceblue;
+}
+
+.heading{
+    font-size: 40px;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+p{
+    font-size: 20px;
+}
+input{
+    height: 20px;
+    width: 150px;
+    font-size: 15px;
+    text-align: center;
+}
+.submit{
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.other{
+    text-align: center;
+}
